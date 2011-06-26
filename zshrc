@@ -1,4 +1,7 @@
 # alias's
+alias cp="cp -p"
+alias mv="mv -i"
+alias rm="rm -i"
 alias la='ls -l'
 alias ls="ls --color -F"
 alias ll="ls --color -alF"

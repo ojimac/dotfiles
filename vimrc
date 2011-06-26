@@ -9,6 +9,7 @@ set laststatus=2
 syntax on
 
 highlight ZenkakuSpace ctermbg=6
+match ZenkakuSpace /??/
 set listchars=tab:>.
 set list
 
