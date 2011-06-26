@@ -1,0 +1,34 @@
+# 起動時のメッセージをオフ
+startup_message off
+
+# shell is zsh
+#shell -/bin/zsh
+
+#C-a converted C-t
+escape ^Tt
+
+#infomation
+#termcap  putty 'hs:ts=\E]2;:fs=\007:ds=\E]0;screen\007'
+#terminfo putty 'hs:ts=\E]2;:fs=\007:ds=\E]0;screen\007'
+
+#autodetach
+autodetach on
+
+#info
+#hardstatus alwayslastline "%w"
+hardstatus alwayslastline "[%02c] %`%-w%{=b bw}%n %t%{-}%+w"
+
+#status
+#caption always "%{= wk} %-w%{=bu dr}%n %t%{-}%+w %= %{=b wb}%y/%m/%d(%D) %{=b wb}%c"
+
+#encoding is utf-8
+encoding utf-8
+
+# スクロールバックできる行数
+defscrollback 10000
+
+# バックグラウンドで何かが起きた時通知!?
+defmonitor on
+
+# vell off
+vbell off
