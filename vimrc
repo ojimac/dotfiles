@@ -1,16 +1,23 @@
-"color
-colorscheme desert
+"colorscheme desert
+colorscheme wombat
+"colorscheme denim
+"colorscheme solarized
+
+if &term =~ "xterm-256color"
+ " colorscheme desert256
+ colorscheme inkpot
+ "colorscheme mrkn256
+endif
+"set background=dark
 
 set laststatus=2
 
-:set statusline=%F%m%r%h%w\ [%{&syntax}]\[%{&ff}]\[%{&fileencoding}]\[%04l,%04v][%p%%]\ %l/%L
-"set statusline=%F%m%r%h%w\ [%{&syntax}]\[%{&ff}]\[%{&fileencoding}]\[%p%%]\ %l/%L
-"set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
+:set statusline=%F%m%r%h%w\ [%{&syntax}]\[%{&ff}]\[%{&fileencoding}]\[%p%%]\ %l/%L
 syntax on
 
 highlight ZenkakuSpace ctermbg=6
 match ZenkakuSpace /??/
-set listchars=tab:>.
+set listchars=tab:^.
 set list
 
 set wildmode=longest,list
@@ -51,3 +58,6 @@ au BufNewFile,BufRead *.changelog setf changelogfiletype plugin on
 " Changelog setting
 :let g:changelog_timeformat = "%Y-%m-%d"
 :let g:changelog_username = "ojimac <ojimac@gmail.com>"
+
+"cakephp template syntax highlighting
+autocmd BufNewFile,BufRead *.ctp set filetype=php
