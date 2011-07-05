@@ -3,9 +3,6 @@ colorscheme wombat
 "colorscheme denim
 "colorscheme solarized
 
-set term=builtin_xterm
-set ttytype=builtin_xterm
-
 if &term =~ "xterm-256color"
  " colorscheme desert256
  colorscheme inkpot
