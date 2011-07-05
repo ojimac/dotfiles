@@ -3,6 +3,9 @@ colorscheme wombat
 "colorscheme denim
 "colorscheme solarized
 
+set term=builtin_xterm
+set ttytype=builtin_xterm
+
 if &term =~ "xterm-256color"
  " colorscheme desert256
  colorscheme inkpot
@@ -41,23 +44,12 @@ set incsearch
 
 set showmatch
 
-set termencoding=utf-8
 set encoding=utf-8
+set termencoding=utf-8
 set fileencodings=utf-8
 
 "hilight                
 set hlsearch
-
-" To enable Changelog plugin
-filetype plugin on
-filetype indent on
-
-" Enable to interpret .changelog files as a changelog filetype
-au BufNewFile,BufRead *.changelog setf changelogfiletype plugin on
-
-" Changelog setting
-:let g:changelog_timeformat = "%Y-%m-%d"
-:let g:changelog_username = "ojimac <ojimac@gmail.com>"
 
 "cakephp template syntax highlighting
 autocmd BufNewFile,BufRead *.ctp set filetype=php
