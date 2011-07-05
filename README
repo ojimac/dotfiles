@@ -2,3 +2,29 @@
 
 - そのうちセットアップスクリプト書く
 -> 簡易版書いた
+
+2011/07/05
+管理が面倒くさいので、git clone してきたdotfilesディレクトリ内の
+ファイルを読み込めるようにした(vimrc, zshrcのみ)
+
+~/.vimrcには
+" 環境依存の.vimrc
+if filereadable(expand('~/.vimrc.local'))
+	source ~/.vimrc.local
+endif
+
+" 共通の.vimrc
+if filereadable(expand('~/dotfiles/vimrc'))
+	source ~/dotfiles/vimrc
+endif
+
+~/.zshrcには
+# 共通のzshrc
+[ -f ${HOME}/dotfiles/zshrc ] && source ${HOME}/dotfiles/zshrc
+
+# 環境依存のzshrc
+[ -f ${HOME}/.zshrc.local ] && source ${HOME}/.zshrc.local
+
+のように書く.また、.vimディレクトリも、
+ln -s ~/dotfiles/.vim .vim
+のようにしてdotfiles内の.vimディレクトリを実体とする
