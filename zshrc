@@ -1,4 +1,4 @@
-# alias's
+# alias
 alias cp="cp -p"
 alias mv="mv -i"
 alias rm="rm -i"
@@ -19,7 +19,10 @@ alias glp="git log -p --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Cres
 # charset
 export LANG=ja_JP.UTF-8
 
+# emcasキーバインド
 bindkey -e
+
+# パス設定
 export PATH=/opt/local/bin:/opt/local/sbin/:/Applications/android-sdk-mac_x86/tools:$PATH
 
 setopt auto_pushd
@@ -55,5 +58,6 @@ colors
 # 補完で大文字小文字を区別しない
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
+# ls時の色
 export LSCOLORS=exfxcxdxbxegedabagacad
 export LS_COLORS='di=36:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
