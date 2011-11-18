@@ -14,6 +14,7 @@ Bundle 'Shougo/unite.vim'
 "Bundle 'thinca/vim-puickrun'
 "Bundle 'thinca/vim-ref'
 "Bundle 'kana/vim-fakeclip'
+Bundle 'vim-scripts/TwitVim'
 " Vundle関連ここまで
 
 "colorscheme desert
@@ -82,9 +83,6 @@ set fileencodings=utf-8
 
 "cakephp template syntax highlighting
 autocmd BufNewFile,BufRead *.ctp set filetype=php
-
-" カーソル位置を目立たせる
-:set cursorline
 
 " Enable filetype plugin
 filetype plugin on
