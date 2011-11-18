@@ -7,7 +7,7 @@ alias ls="ls --color -F"
 alias ll="ls --color -alF"
 alias s="sudo"
 alias screen='screen -xRU'
-alias vi='vim'
+alias v='vim'
 
 # git alias
 alias g='git'
@@ -15,6 +15,8 @@ alias gits='git status'
 alias gitb='git branch'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias glp="git log -p --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+alias gpush="git push origin master"
+alias gpull="git pull origin master"
 
 # charset
 export LANG=ja_JP.UTF-8
