@@ -14,6 +14,7 @@ Bundle 'Shougo/unite.vim'
 "Bundle 'thinca/vim-puickrun'
 "Bundle 'thinca/vim-ref'
 "Bundle 'kana/vim-fakeclip'
+Bundle 'vim-scripts/TwitVim'
 " Vundle関連ここまで
 
 "colorscheme desert
