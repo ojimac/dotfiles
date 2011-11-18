@@ -83,9 +83,6 @@ set fileencodings=utf-8
 "cakephp template syntax highlighting
 autocmd BufNewFile,BufRead *.ctp set filetype=php
 
-" カーソル位置を目立たせる
-:set cursorline
-
 " Enable filetype plugin
 filetype plugin on
 "filetype indent on

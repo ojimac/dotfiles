@@ -22,9 +22,6 @@ export LANG=ja_JP.UTF-8
 # emcasキーバインド
 bindkey -e
 
-# パス設定
-export PATH=/opt/local/bin:/opt/local/sbin/:/Applications/android-sdk-mac_x86/tools:$PATH
-
 setopt auto_pushd
 
 # === Git Branch Info
