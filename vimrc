@@ -7,8 +7,8 @@ call vundle#rc()
 
 "Bundle 'andrewlkho/buftabs'
 Bundle 'Shougo/neocomplcache'
-"Bundle 'fholgado/minibufexpl.vim'
-"Bundle 'Shougo/unite.vim'
+Bundle 'fholgado/minibufexpl.vim'
+Bundle 'Shougo/unite.vim'
 "Bundle 'scrooloose/nerdcommenter'
 "Bundle 'tpope/vim-surround'
 "Bundle 'thinca/vim-puickrun'
@@ -87,8 +87,10 @@ autocmd BufNewFile,BufRead *.ctp set filetype=php
 filetype plugin on
 "filetype indent on
 
-" buftab
-let g:buftabs_only_basename=1 " ファイル名だけ表示
-
 " neocomplcache
 let g:neocomplcache_enable_at_startup = 1
+
+" minibufexpl
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBuffs = 1
