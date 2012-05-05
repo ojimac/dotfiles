@@ -7,7 +7,8 @@ alias ls="ls --color -F"
 alias ll="ls --color -alF"
 alias s="sudo"
 alias screen='screen -xRU'
-alias vi='vim'
+alias v='/usr/local/bin/vim'
+alias vi='/usr/local/bin/vim'
 
 # git alias
 alias g='git'
@@ -15,15 +16,15 @@ alias gits='git status'
 alias gitb='git branch'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias glp="git log -p --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+alias gpush="git push origin master"
+alias gpull="git pull origin master"
+alias gco="git checkout master"
 
 # charset
 export LANG=ja_JP.UTF-8
 
 # emcasキーバインド
 bindkey -e
-
-# パス設定
-export PATH=/opt/local/bin:/opt/local/sbin/:/Applications/android-sdk-mac_x86/tools:$PATH
 
 setopt auto_pushd
 
