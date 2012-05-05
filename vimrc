@@ -14,6 +14,8 @@ Bundle 'fholgado/minibufexpl.vim'
 "Bundle 'thinca/vim-ref'
 "Bundle 'kana/vim-fakeclip'
 Bundle 'vim-scripts/TwitVim'
+Bundle 'Align'
+Bundle 'pekepeke/titanium-vim'
 " Vundle関連ここまで
 
 colorscheme wombat
@@ -22,6 +24,7 @@ colorscheme wombat
 if &term =~ "xterm-256color"
  colorscheme molokai
 endif
+set t_Co=256
 
 "ステータスラインを常に表示
 set laststatus=2
@@ -93,6 +96,10 @@ au BufNewFile,BufRead *.php set softtabstop=4 | set tabstop=4 | set shiftwidth=4
 au BufNewFile,BufRead *.html set shiftwidth=2 | set expandtab
 " cakeのテンプレートもhtml syntaxで
 au BufNewFile,BufRead *.ctp  set shiftwidth=2 | set expandtab
+autocmd BufNewFile,BufRead *.py  set softtabstop=2 tabstop=2 shiftwidth=2 | set expandtab
+autocmd BufNewFile,BufRead *.rb  set softtabstop=2 tabstop=2 shiftwidth=2 | set expandtab
+autocmd BufNewFile,BufRead *.js  set softtabstop=2 tabstop=2 shiftwidth=2 | set expandtab
+autocmd BufNewFile,BufRead *.coffee  set softtabstop=2 tabstop=2 shiftwidth=2 | set expandtab
 
 " neocomplcache
 let g:neocomplcache_enable_at_startup = 1
