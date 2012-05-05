@@ -53,3 +53,5 @@
 	# grep関連
 	gr = grep
 	gn = grep -n
+[http]
+	sslVerify = false
