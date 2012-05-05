@@ -3,12 +3,12 @@ alias cp="cp -p"
 alias mv="mv -i"
 alias rm="rm -i"
 alias la='ls -l'
-alias ls="ls --color -F"
-alias ll="ls --color -alF"
+alias ls="ls -FG"
+alias ll="ls -alFG"
 alias s="sudo"
 alias screen='screen -xRU'
-alias v='/usr/local/bin/vim'
-alias vi='/usr/local/bin/vim'
+alias v='vim'
+alias vi='vim'
 
 # git alias
 alias g='git'
