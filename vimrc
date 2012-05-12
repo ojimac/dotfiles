@@ -16,6 +16,7 @@ Bundle 'fholgado/minibufexpl.vim'
 Bundle 'vim-scripts/TwitVim'
 Bundle 'Align'
 Bundle 'pekepeke/titanium-vim'
+Bundle 'kchmck/vim-coffee-script'
 " Vundle関連ここまで
 
 colorscheme wombat
