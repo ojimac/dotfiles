@@ -97,10 +97,10 @@ au BufNewFile,BufRead *.php set softtabstop=4 | set tabstop=4 | set shiftwidth=4
 au BufNewFile,BufRead *.html set shiftwidth=2 | set expandtab
 " cakeのテンプレートもhtml syntaxで
 au BufNewFile,BufRead *.ctp  set shiftwidth=2 | set expandtab
-autocmd BufNewFile,BufRead *.py  set softtabstop=2 tabstop=2 shiftwidth=2 | set expandtab
-autocmd BufNewFile,BufRead *.rb  set softtabstop=2 tabstop=2 shiftwidth=2 | set expandtab
-autocmd BufNewFile,BufRead *.js  set softtabstop=2 tabstop=2 shiftwidth=2 | set expandtab
-autocmd BufNewFile,BufRead *.coffee  set softtabstop=2 tabstop=2 shiftwidth=2 | set expandtab
+au BufNewFile,BufRead *.py  set softtabstop=4 tabstop=4 shiftwidth=4 | set expandtab
+au BufNewFile,BufRead *.rb  set softtabstop=2 tabstop=2 shiftwidth=2 | set expandtab
+au BufNewFile,BufRead *.js  set softtabstop=2 tabstop=2 shiftwidth=2 | set expandtab
+au BufNewFile,BufRead *.coffee  set softtabstop=2 tabstop=2 shiftwidth=2 | set expandtab
 
 " neocomplcache
 let g:neocomplcache_enable_at_startup = 1
