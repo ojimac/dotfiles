@@ -1,5 +1,4 @@
 set nocompatible
-filetype off
 
 " Vundle設定ここから
 set rtp+=~/dotfiles/.vim/vundle/
@@ -17,21 +16,27 @@ Bundle 'vim-scripts/TwitVim'
 Bundle 'Align'
 Bundle 'pekepeke/titanium-vim'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'mileszs/ack.vim'
 " Vundle関連ここまで
 
-colorscheme wombat
+syntax enable
+colorscheme desert
 
 " 256色対応のターミナルの場合
 if &term =~ "xterm-256color"
- colorscheme molokai
+  "colorscheme molokai
+  set background=dark
+  let g:solarized_termtrans = 1
+  let g:solarized_termcolors = 256
+  let g:solarized_visibility = "high"
+  let g:solarized_contrast = "high"
+  colorscheme solarized
 endif
-set t_Co=256
 
 "ステータスラインを常に表示
 set laststatus=2
 set statusline=%F%m%r%h%w\ [%{&syntax}]\[%{&ff}]\[%{&fileencoding}]\[%p%%]\ %l/%L
 
-syntax on
 
 " 全角スペース可視化
 highlight ZenkakuSpace ctermbg=6
