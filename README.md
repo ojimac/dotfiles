@@ -42,15 +42,17 @@ vimまわりと同様に、gitで管理する設定と、管理外の設定に�
 ## screen
 
 $HOME/.screenrcは、dotfiles/screenrcのシンボリックリンクになるようにします。
+
 ※ セットアップ用スクリプトで行います
 
 ## git
 
 $HOME/.gitconfigは、dotfiles/gitconfigのシンボリックリンクになるようにします。
+
 ※ セットアップ用スクリプトで行います
 
 ## setup.py
--
+
 	$ ./setup.py
 
 を実行することで、
