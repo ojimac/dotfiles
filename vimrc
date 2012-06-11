@@ -26,10 +26,14 @@ colorscheme desert
 if &term =~ "xterm-256color"
   "colorscheme molokai
   set background=dark
-  let g:solarized_termtrans = 1
-  let g:solarized_termcolors = 256
-  let g:solarized_visibility = "high"
-  let g:solarized_contrast = "high"
+  let g:solarized_termtrans=1
+  let g:solarized_termcolors=256
+  let g:solarized_visibility="medium"
+  let g:solarized_contrast="high"
+  let g:solarized_degrade=0
+  let g:solarized_bold=1
+  let g:solarized_underline=1
+  let g:solarized_italic=1
   colorscheme solarized
 endif
 
