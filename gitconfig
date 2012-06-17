@@ -55,3 +55,5 @@
 	gn = grep -n
 [http]
 	sslVerify = false
+[github]
+	user = ojimac
