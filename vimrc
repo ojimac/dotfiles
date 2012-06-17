@@ -53,7 +53,7 @@ match ZenkakuSpace /??/
 " タブ文字可視化
 set list
 "set listchars=tab:^.
-set listchars=eol:¬,tab:▸\
+set listchars=eol:¬,tab:▸\ 
 
 " コマンドライン補完するときに強化されたものを使う(参照 :help wildmenu)
 " set wildmenu
