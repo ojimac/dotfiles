@@ -136,6 +136,9 @@ au BufNewFile,BufRead *.py  set softtabstop=4 tabstop=4 shiftwidth=4 | set expan
 " ruby
 au BufNewFile,BufRead *.rb  set softtabstop=2 tabstop=2 shiftwidth=2 | set expandtab
 
+" erb
+au BufNewFile,BufRead *.erb  set softtabstop=2 tabstop=2 shiftwidth=2 | set expandtab
+
 " javascript
 au BufNewFile,BufRead *.js  set softtabstop=2 tabstop=2 shiftwidth=2 | set expandtab
 
