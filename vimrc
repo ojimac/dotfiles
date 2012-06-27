@@ -45,7 +45,6 @@ colorscheme jellybeans
 set laststatus=2
 set statusline=%F%m%r%h%w\ [%{&syntax}]\[%{&ff}]\[%{&fileencoding}]\[%p%%]\ %l/%L
 
-
 " 全角スペース可視化
 highlight ZenkakuSpace ctermbg=6
 match ZenkakuSpace /??/
@@ -71,8 +70,8 @@ set nobackup
 set noswapfile
 
 " インデントスタイル
-"set autoindent
-"set smartindent
+set autoindent
+set smartindent
 
 " タブ幅設定
 set smarttab
@@ -89,7 +88,7 @@ set smartcase
 set incsearch
 
 " 検索結果文字列のハイライトを有効にしない
-set nohlsearch
+"set nohlsearch
 
 set showmatch
 
@@ -128,6 +127,16 @@ au BufNewFile,BufRead *.js  set softtabstop=2 tabstop=2 shiftwidth=2 | set expan
 " cofeescript
 au BufNewFile,BufRead *.coffee  set softtabstop=2 tabstop=2 shiftwidth=2 | set expandtab
 
+" ---------------------------------------------------------------------------
+" keymappings
+" ---------------------------------------------------------------------------
+" コロンとセミコロン入れ替え
+noremap ; :
+noremap : ;
+
+" 検索結果のハイライトをESC連打で消す
+set hlsearch
+noremap <Esc><Esc> :nohlsearch<CR><Esc>
 " ---------------------------------------------------------------------------
 " plugin settings
 " ---------------------------------------------------------------------------
