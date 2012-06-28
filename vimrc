@@ -43,6 +43,7 @@ Bundle 'mileszs/ack.vim'
 "Bundle 'thinca/vim-quickrun'
 Bundle 'mattn/gist-vim'
 Bundle 'mattn/webapi-vim'
+Bundle 'basyura/jslint.vim'
 
 " ---------------------------------------------------------------------------
 " Colorscheme
@@ -172,3 +173,11 @@ let g:miniBufExplMapCTabSwitchBuffs = 1
 "\ 'exec': '%c -f %s',
 "\ 'tempfile': '{tempfile()}.mkd'
 "\ }
+
+" jslint.vim
+function! s:javascript_filetype_settings()
+  autocmd BufLeave     <buffer> call jslint#clear()
+  autocmd BufWritePost <buffer> call jslint#check()
+  autocmd CursorMoved  <buffer> call jslint#message()
+endfunction
+autocmd FileType javascript call s:javascript_filetype_settings()
