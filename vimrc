@@ -121,6 +121,9 @@ filetype plugin indent on
 " syntax
 " ---------------------------------------------------------------------------
 
+" txt
+au BufNewFile,BufRead *.txt set softtabstop=4 tabstop=4 shiftwidth=4 | set expandtab
+
 " php
 au BufNewFile,BufRead *.php set softtabstop=4 | set tabstop=4 | set shiftwidth=4 | set noexpandtab
 
