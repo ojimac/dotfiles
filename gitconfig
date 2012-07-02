@@ -17,6 +17,7 @@
 	ad = add
 	addp = add -p
 	ci = commit -a           # modifiedなファイルを全てstageへ
+	cim = commit -m
 	cam = commit -a --amend  # 直前のcommitを修正
 	co = checkout
 	# branch関連
