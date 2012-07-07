@@ -45,7 +45,7 @@ Bundle 'mattn/gist-vim'
 Bundle 'mattn/webapi-vim'
 Bundle 'JavaScript-syntax'
 Bundle 'pangloss/vim-javascript'
-"Bundle 'basyura/jslint.vim'
+Bundle 'basyura/jslint.vim'
 
 " ---------------------------------------------------------------------------
 " Colorscheme
@@ -180,12 +180,13 @@ let g:miniBufExplMapCTabSwitchBuffs = 1
 "\ }
 
 " jslint.vim
-"function! s:javascript_filetype_settings()
-"  autocmd BufLeave     <buffer> call jslint#clear()
-"  autocmd BufWritePost <buffer> call jslint#check()
-"  autocmd CursorMoved  <buffer> call jslint#message()
-"endfunction
-"autocmd FileType javascript call s:javascript_filetype_settings()
+function! s:javascript_filetype_settings()
+	autocmd BufLeave     <buffer> call jslint#clear()
+	autocmd BufWritePost <buffer> call jslint#check()
+	autocmd CursorMoved  <buffer> call jslint#message()
+endfunction
+autocmd FileType javascript call s:javascript_filetype_settings()
 
-autocmd FileType javascript :compiler gjslint
-autocmd QuickfixCmdPost make copen
+" :makeでcolsure compilerを使って文法チェック
+"autocmd FileType javascript :compiler gjslint
+"autocmd QuickfixCmdPost make copen

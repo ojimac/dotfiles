@@ -29,20 +29,14 @@
 
 としておき、実体はdotfiles配下の.vimディレクトリを見るようにしておきます。
 
-また、Closure Linterでjsの文法チェックをしているので、
-
-	$ sudo easy_install http://closure-linter.googlecode.com/files/closure_linter-latest.tar.gz
-
-をしておく必要があります。
-
 ## zsh
 
 vimまわりと同様に、gitで管理する設定と、管理外の設定に分けています。
-                                                                                                                      
+
     # 共通のzshrc
-    [ -f ${HOME}/dotfiles/zshrc ] && source ${HOME}/dotfiles/zshrc                                                    
-                                                                                                                      
-    # 環境依存のzshrc                                                                                                 
+    [ -f ${HOME}/dotfiles/zshrc ] && source ${HOME}/dotfiles/zshrc
+
+    # 環境依存のzshrc
     [ -f ${HOME}/.zshrc.local ] && source ${HOME}/.zshrc.local
 
 ## screen
