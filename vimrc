@@ -157,9 +157,16 @@ au BufNewFile,BufRead *.coffee  set softtabstop=2 tabstop=2 shiftwidth=2 | set e
 noremap ; :
 noremap : ;
 
-" 検索結果のハイライトをESC連打で消す
+" Escの2回押しでハイライト消去
 set hlsearch
 noremap <Esc><Esc> :nohlsearch<CR><Esc>
+
+" CTRL-hjklでウィンドウ移動
+nnoremap <C-j> :<C-w>j
+nnoremap <C-k> :<C-k>j
+nnoremap <C-l> :<C-l>j
+nnoremap <C-h> :<C-h>j
+
 " ---------------------------------------------------------------------------
 " plugin settings
 " ---------------------------------------------------------------------------
