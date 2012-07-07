@@ -7,6 +7,7 @@
 	editor = vi
 	pager = less -r
 [alias]
+	s = status
 	info = config --get remote.origin.url
 	st = status
 	sh = show
