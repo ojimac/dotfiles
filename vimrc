@@ -43,7 +43,7 @@ Bundle 'mileszs/ack.vim'
 "Bundle 'thinca/vim-quickrun'
 Bundle 'mattn/gist-vim'
 Bundle 'mattn/webapi-vim'
-Bundle 'JavaScript-syntax'
+"Bundle 'JavaScript-syntax'
 Bundle 'pangloss/vim-javascript'
 Bundle 'basyura/jslint.vim'
 
