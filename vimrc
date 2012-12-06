@@ -2,6 +2,7 @@
 " General
 " ---------------------------------------------------------------------------
 
+" 非互換モード
 set nocompatible
 
 " ---------------------------------------------------------------------------
@@ -27,23 +28,12 @@ call vundle#rc()
 
 Bundle 'Shougo/neocomplcache'
 Bundle 'fholgado/minibufexpl.vim'
-"Bundle 'Shougo/unite.vim'
-"Bundle 'scrooloose/nerdcommenter'
-"Bundle 'tpope/vim-surround'
-"Bundle 'thinca/vim-puickrun'
-"Bundle 'thinca/vim-ref'
-"Bundle 'kana/vim-fakeclip'
 Bundle 'vim-scripts/TwitVim'
 Bundle 'Align'
 Bundle 'pekepeke/titanium-vim'
-Bundle 'kchmck/vim-coffee-script'
-"Bundle 'mattn/mkdpreview-vim'
 Bundle 'mileszs/ack.vim'
-"Bundle 'tpope/vim-markdown'
-"Bundle 'thinca/vim-quickrun'
 Bundle 'mattn/gist-vim'
 Bundle 'mattn/webapi-vim'
-Bundle 'JavaScript-syntax'
 Bundle 'pangloss/vim-javascript'
 Bundle 'basyura/jslint.vim'
 
@@ -52,7 +42,16 @@ Bundle 'basyura/jslint.vim'
 " ---------------------------------------------------------------------------
 
 syntax enable
-colorscheme jellybeans
+set background=dark
+let g:solarized_termtrans=1
+let g:solarized_termcolors=256
+let g:solarized_visibility="medium"
+let g:solarized_contrast="high"
+let g:solarized_degrade=0
+let g:solarized_bold=1
+let g:solarized_underline=1
+let g:solarized_italic=1
+colorscheme solarized
 
 " ---------------------------------------------------------------------------
 " UI
@@ -174,17 +173,19 @@ nnoremap <C-h> :<C-h>j
 " neocomplcache
 let g:neocomplcache_enable_at_startup = 1
 
-" minibufexpl
+" minibuffer
 let g:miniBufExplMapWindowNavVim = 1
 let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBuffs = 1
-
-"let g:quickrun_config = {}
-"let g:quickrun_config['markdown'] = {
-"\ 'command': 'bluecloth',
-"\ 'exec': '%c -f %s',
-"\ 'tempfile': '{tempfile()}.mkd'
-"\ }
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget=1
+let g:miniBufExplSplitToEdge=1
+" MiniBufExplorer で GNU screen likeなキーバインド
+let mapleader = ""
+nmap <S-Space> :MBEbp<CR>
+nmap <Space> :MBEbn<CR>
+nnoremap <C-X><C-N> :new<CR>
+nnoremap <C-X><C-K> :bd<CR>
+let mapleader = '\'
 
 " jslint.vim
 function! s:javascript_filetype_settings()
