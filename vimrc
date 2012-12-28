@@ -36,6 +36,9 @@ Bundle 'mattn/gist-vim'
 Bundle 'mattn/webapi-vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'basyura/jslint.vim'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'tpope/vim-rails'
+Bundle 'scrooloose/nerdtree'
 
 " ---------------------------------------------------------------------------
 " Colorscheme
