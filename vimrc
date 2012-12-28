@@ -5,6 +5,9 @@
 " 非互換モード
 set nocompatible
 
+" 行番号表示
+set number
+
 " ---------------------------------------------------------------------------
 " functions
 " ---------------------------------------------------------------------------
@@ -70,17 +73,10 @@ match ZenkakuSpace /??/
 
 " タブ文字可視化
 set list
-"set listchars=tab:^.
 set listchars=eol:¬,tab:▸\ 
 
 " コマンドライン補完するときに強化されたものを使う(参照 :help wildmenu)
-" set wildmenu
-
-" コマンドライン補間をシェルっぽく
-set wildmode=list:longest
-"set wildmode=longest,list
-
-set complete=.,w,b,u,k
+set wildmenu
 
 " バックアップをしない
 set nobackup
@@ -95,6 +91,7 @@ set smartindent
 " タブ幅設定
 set smarttab
 
+" バックスペースの挙動
 set backspace=indent,eol,start
 
 " 検索文字列が小文字の場合は大文字小文字を区別なく検索する
@@ -106,9 +103,7 @@ set smartcase
 " インクリメンタルサーチ
 set incsearch
 
-" 検索結果文字列のハイライトを有効にしない
-"set nohlsearch
-
+" 対応する括弧を強調表示
 set showmatch
 
 set encoding=utf-8
@@ -119,7 +114,9 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 
-filetype plugin indent on
+filetype on
+filetype plugin on
+filetype indent on
 
 " ---------------------------------------------------------------------------
 " syntax
@@ -155,10 +152,6 @@ au BufNewFile,BufRead *.coffee  set softtabstop=2 tabstop=2 shiftwidth=2 | set e
 " ---------------------------------------------------------------------------
 " keymappings
 " ---------------------------------------------------------------------------
-" コロンとセミコロン入れ替え
-noremap ; :
-noremap : ;
-
 " Escの2回押しでハイライト消去
 set hlsearch
 noremap <Esc><Esc> :nohlsearch<CR><Esc>
