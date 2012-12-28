@@ -164,12 +164,24 @@ nnoremap <C-k> :<C-k>j
 nnoremap <C-l> :<C-l>j
 nnoremap <C-h> :<C-h>j
 
+" MiniBufExplorer で GNU screen likeなキーバインド
+let mapleader = ""
+nmap <S-Space> :MBEbp<CR>
+nmap <Space> :MBEbn<CR>
+nnoremap <C-X><C-N> :new<CR>
+nnoremap <C-X><C-K> :bd<CR>
+
+" コロンとセミコロン入れ替え
+"noremap ; :
+"noremap : ;
+
 " ---------------------------------------------------------------------------
 " plugin settings
 " ---------------------------------------------------------------------------
 
 " neocomplcache
 let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_auto_select = 1
 
 " minibuffer
 let g:miniBufExplMapWindowNavVim = 1
@@ -177,13 +189,6 @@ let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget=1
 let g:miniBufExplSplitToEdge=1
-" MiniBufExplorer で GNU screen likeなキーバインド
-let mapleader = ""
-nmap <S-Space> :MBEbp<CR>
-nmap <Space> :MBEbn<CR>
-nnoremap <C-X><C-N> :new<CR>
-nnoremap <C-X><C-K> :bd<CR>
-let mapleader = '\'
 
 " jslint.vim
 function! s:javascript_filetype_settings()
@@ -194,5 +199,5 @@ endfunction
 autocmd FileType javascript call s:javascript_filetype_settings()
 
 " :makeでcolsure compilerを使って文法チェック
-"autocmd FileType javascript :compiler gjslint
-"autocmd QuickfixCmdPost make copen
+autocmd FileType javascript :compiler gjslint
+autocmd QuickfixCmdPost make copen
