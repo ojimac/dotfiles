@@ -6,6 +6,7 @@ import os
 dotfiles = (
     'gitconfig',
     'screenrc',
+    'tmux.conf'
 )
 
 # .vimディレクトリはdotfiles/.vimを使うようにシンボリックリンクを張る
