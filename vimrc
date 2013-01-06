@@ -55,6 +55,8 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-rails'
 " ディレクトリファイルツリー表示
 Bundle 'scrooloose/nerdtree'
+" インデント表示
+Bundle 'nathanaelkane/vim-indent-guides'
 
 " ---------------------------------------------------------------------------
 " Colorscheme
@@ -214,3 +216,8 @@ autocmd FileType javascript call s:javascript_filetype_settings()
 " :makeでcolsure compilerを使って文法チェック
 autocmd FileType javascript :compiler gjslint
 autocmd QuickfixCmdPost make copen
+
+" インデントの色付け幅
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#121212 ctermbg=233
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#262626 ctermbg=235
