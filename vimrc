@@ -29,18 +29,31 @@ noremap <leader>ss :call StripWhitespace()<CR>
 set rtp+=~/dotfiles/.vim/vundle/
 call vundle#rc()
 
+" 補完
 Bundle 'Shougo/neocomplcache'
+" バッファ表示
 Bundle 'fholgado/minibufexpl.vim'
+" vimからTwitter投稿
 Bundle 'vim-scripts/TwitVim'
+" 行揃え用
 Bundle 'Align'
+" Titanium用
 Bundle 'pekepeke/titanium-vim'
+" より良いgrep
 Bundle 'mileszs/ack.vim'
+" vimからgist投稿
 Bundle 'mattn/gist-vim'
+" gist-vim用
 Bundle 'mattn/webapi-vim'
+" jsの補完
 Bundle 'pangloss/vim-javascript'
+" js シンタックスチェック
 Bundle 'basyura/jslint.vim'
+" solarized colorscheme
 Bundle 'altercation/vim-colors-solarized'
+" rails用
 Bundle 'tpope/vim-rails'
+" ディレクトリファイルツリー表示
 Bundle 'scrooloose/nerdtree'
 
 " ---------------------------------------------------------------------------
