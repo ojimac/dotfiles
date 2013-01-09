@@ -79,3 +79,9 @@ HISTSIZE=100000                       # メモリ内の履歴の数
 SAVEHIST=100000                       # 保存される履歴の数
 setopt extended_history               # 履歴ファイルに時刻を記録
 function history-all { history -E 1 } # 全履歴の一覧を出力する
+
+# z
+. /usr/local/etc/profile.d/z.sh
+function _Z_precmd {
+  z --add "$(pwd -P)" 61 }
+precmd_functions=($precmd_functions _Z_precmd)
