@@ -166,6 +166,9 @@ au BufNewFile,BufRead *.js  set softtabstop=2 tabstop=2 shiftwidth=2 | set expan
 " cofeescript
 au BufNewFile,BufRead *.coffee  set softtabstop=2 tabstop=2 shiftwidth=2 | set expandtab
 
+" podspec
+au BufNewFile,BufRead *.podspec  set softtabstop=2 tabstop=2 shiftwidth=2 | set expandtab
+
 " ---------------------------------------------------------------------------
 " keymappings
 " ---------------------------------------------------------------------------
