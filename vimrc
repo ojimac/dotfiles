@@ -39,8 +39,8 @@ Bundle 'vim-scripts/TwitVim'
 Bundle 'Align'
 " Titanium用
 Bundle 'pekepeke/titanium-vim'
-" より良いgrep
-Bundle 'mileszs/ack.vim'
+" より良いgrep -> より良いack
+Bundle 'rking/ag.vim'
 " vimからgist投稿
 Bundle 'mattn/gist-vim'
 " gist-vim用
