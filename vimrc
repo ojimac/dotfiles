@@ -57,7 +57,15 @@ Bundle 'tpope/vim-rails'
 Bundle 'scrooloose/nerdtree'
 " インデント表示
 Bundle 'nathanaelkane/vim-indent-guides'
-
+" iOS
+Bundle 'git://github.com/tokorom/clang_complete.git'
+Bundle 'git://github.com/tokorom/clang_complete-getopts-ios.git'
+" haml
+Bundle 'tpope/vim-haml'
+" auto-save
+Bundle '907th/vim-auto-save'
+" matchit
+source $VIMRUNTIME/macros/matchit.vim
 " ---------------------------------------------------------------------------
 " Colorscheme
 " ---------------------------------------------------------------------------
@@ -169,6 +177,10 @@ au BufNewFile,BufRead *.coffee  set softtabstop=2 tabstop=2 shiftwidth=2 | set e
 " podspec
 au BufNewFile,BufRead *.podspec  set softtabstop=2 tabstop=2 shiftwidth=2 | set expandtab
 
+" Objective-C
+au BufNewFile,BufRead *.h  set softtabstop=4 tabstop=4 shiftwidth=4 | set expandtab
+au BufNewFile,BufRead *.m  set softtabstop=4 tabstop=4 shiftwidth=4 | set expandtab
+
 " ---------------------------------------------------------------------------
 " keymappings
 " ---------------------------------------------------------------------------
@@ -225,3 +237,10 @@ let g:indent_guides_enable_on_vim_startup=1
 let g:indent_guides_auto_colors = 0
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#121212 ctermbg=233
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#262626 ctermbg=235
+
+" iOS
+let g:clang_auto_user_options = 'path, .clang_complete, ios'
+
+" auto-save
+let g:auto_save = 1
+let g:auto_save_no_updatetime = 1
