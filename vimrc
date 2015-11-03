@@ -33,23 +33,15 @@ call vundle#rc()
 Bundle 'Shougo/neocomplcache'
 " バッファ表示
 Bundle 'fholgado/minibufexpl.vim'
-" vimからTwitter投稿
-Bundle 'vim-scripts/TwitVim'
 " 行揃え用
 Bundle 'Align'
-" Titanium用
-Bundle 'pekepeke/titanium-vim'
 " より良いgrep -> より良いack
 Bundle 'rking/ag.vim'
-" vimからgist投稿
-Bundle 'mattn/gist-vim'
-" gist-vim用
-Bundle 'mattn/webapi-vim'
 " jsの補完
 Bundle 'pangloss/vim-javascript'
 " js シンタックスチェック
 Bundle 'basyura/jslint.vim'
-" solarized colorscheme
+" colorscheme
 Bundle 'altercation/vim-colors-solarized'
 " rails用
 Bundle 'tpope/vim-rails'
@@ -57,15 +49,15 @@ Bundle 'tpope/vim-rails'
 Bundle 'scrooloose/nerdtree'
 " インデント表示
 Bundle 'nathanaelkane/vim-indent-guides'
-" iOS
-Bundle 'git://github.com/tokorom/clang_complete.git'
-Bundle 'git://github.com/tokorom/clang_complete-getopts-ios.git'
 " haml
 Bundle 'tpope/vim-haml'
 " auto-save
 Bundle '907th/vim-auto-save'
 " matchit
 source $VIMRUNTIME/macros/matchit.vim
+" lightline
+Bundle 'itchyny/lightline.vim'
+
 " ---------------------------------------------------------------------------
 " Colorscheme
 " ---------------------------------------------------------------------------
@@ -82,7 +74,6 @@ let g:solarized_termtrans=1
 let g:solarized_contrast="normal"
 let g:solarized_visibility="normal"
 colorscheme solarized
-"colorscheme railscasts2
 
 " ---------------------------------------------------------------------------
 " UI
@@ -244,3 +235,8 @@ let g:clang_auto_user_options = 'path, .clang_complete, ios'
 " auto-save
 let g:auto_save = 1
 let g:auto_save_no_updatetime = 1
+
+" lightline
+let g:lightline = {
+\ 'colorscheme': 'solarized',
+\ }
