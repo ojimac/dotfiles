@@ -13,12 +13,16 @@ alias vi='vim'
 # git alias
 alias g='git'
 alias gits='git status'
+alias gs='git status'
 alias gitb='git branch'
+alias gb='git branch'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias glp="git log -p --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias gpush="git push origin master"
 alias gpull="git pull origin master"
 alias gco="git checkout master"
+alias gstash='git stash'
+alias gpop='git stash pop'
 
 # charset
 export LANG=ja_JP.UTF-8
@@ -81,7 +85,7 @@ setopt extended_history               # 履歴ファイルに時刻を記録
 function history-all { history -E 1 } # 全履歴の一覧を出力する
 
 # z
-. /usr/local/etc/profile.d/z.sh
-function _Z_precmd {
-  z --add "$(pwd -P)" 61 }
-precmd_functions=($precmd_functions _Z_precmd)
+#. /usr/local/etc/profile.d/z.sh
+#function _Z_precmd {
+#  z --add "$(pwd -P)" 61 }
+#precmd_functions=($precmd_functions _Z_precmd)
