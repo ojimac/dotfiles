@@ -5,26 +5,32 @@
 	ui = true
 [core]
 	pager = less -r
+	attributesfile = ~/.gitattributes_global
 [alias]
-	s = status
-	info = config --get remote.origin.url
-	st = status
-	sh = show
-	so = remote show origin
-	ft = fetch
-	up = pull --rebase       # pull rebase
-	rbm = rebase master      # masterへのrebaseはよく使うのでalias
 	ad = add
 	addp = add -p
+	cam = commit -a --amend  # 直前のcommitを修正
 	ci = commit -a           # modifiedなファイルを全てstageへ
 	cim = commit -m
-	cam = commit -a --amend  # 直前のcommitを修正
 	co = checkout
+	com = checkout master
+	ft = fetch
+	info = config --get remote.origin.url
+	pop = stash pop
+	rbm = rebase master      # masterへのrebaseはよく使うのでalias
+	s = status
+	sh = show
+	so = remote show origin
+	st = status
+	sta = stash
+	up = pull --rebase       # pull rebase
+
 	# branch関連
 	br = branch
 	ba = branch -a           # originも含めた全てのbranchを表示
 	bm = branch --merged     # merge済みのbranchを表示
 	bn = branch --no-merged  # mergeしてないbranchを表示
+
 	# log関連
 	wc = whatchanged         # logに変更されたファイルも一緒に出す
 	ls = log --stat          # logに変更されたファイルも一緒に出す
@@ -34,8 +40,10 @@
 	lt = log --decorate=full  # logにタグ名まで出す
 	oneline = log --pretty=oneline
 	ranking = shortlog -s -n --no-merges
+
 	# logをtree表示
 	log-graph = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
+
 	# diff関連
 	dm = diff master           # masterとのdiff
 	dw = diff --color-words    # 単語単位でいろつけてdiff
@@ -47,14 +55,26 @@
 	d4 = diff HEAD~~~~         # HEADから4つ前とdiff
 	d5 = diff HEAD~~~~~        # HEADから5つ前とdiff
 	d10 = diff HEAD~~~~~~~~~~  # HEADから10前とdiff
+
 	# mergeの際にconflictが起きたファイルを編集
 	edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
+
 	# mergeの際にconflictが起きたファイルをadd
 	add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
+
 	# grep関連
 	gr = grep
 	gn = grep -n
+
+	# マージ済みブランチ削除
+	delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
 [http]
 	sslVerify = false
 [github]
 	user = ojimac
+[push]
+	default = simple
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
