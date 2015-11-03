@@ -148,7 +148,8 @@ au BufNewFile,BufRead *.php set softtabstop=4 | set tabstop=4 | set shiftwidth=4
 au BufNewFile,BufRead *.html set shiftwidth=2 | set expandtab
 
 " cake template file
-au BufNewFile,BufRead *.ctp  set shiftwidth=2 | set expandtab
+"au BufNewFile,BufRead *.ctp  set shiftwidth=2 | set expandtab
+au BufNewFile,BufRead *.ctp set softtabstop=4 | set tabstop=4 | set shiftwidth=4 | set noexpandtab
 
 " python
 au BufNewFile,BufRead *.py  set softtabstop=4 tabstop=4 shiftwidth=4 | set expandtab
@@ -171,6 +172,9 @@ au BufNewFile,BufRead *.podspec  set softtabstop=2 tabstop=2 shiftwidth=2 | set 
 " Objective-C
 au BufNewFile,BufRead *.h  set softtabstop=4 tabstop=4 shiftwidth=4 | set expandtab
 au BufNewFile,BufRead *.m  set softtabstop=4 tabstop=4 shiftwidth=4 | set expandtab
+
+" scss
+au BufNewFile,BufRead *.scss  set softtabstop=2 tabstop=2 shiftwidth=2 | set expandtab
 
 " ---------------------------------------------------------------------------
 " keymappings
