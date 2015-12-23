@@ -42,7 +42,7 @@ Bundle 'pangloss/vim-javascript'
 " js シンタックスチェック
 Bundle 'basyura/jslint.vim'
 " colorscheme
-Bundle 'altercation/vim-colors-solarized'
+Bundle 'geoffharcourt/one-dark.vim'
 " rails用
 Bundle 'tpope/vim-rails'
 " ディレクトリファイルツリー表示
@@ -65,15 +65,7 @@ Bundle 'itchyny/lightline.vim'
 syntax enable
 set background=dark
 set t_Co=256
-let g:solarized_termcolors=256
-let g:solarized_degrade=0
-let g:solarized_bold=1
-let g:solarized_underline=1
-let g:solarized_italic=1
-let g:solarized_termtrans=1
-let g:solarized_contrast="normal"
-let g:solarized_visibility="normal"
-colorscheme solarized
+colorscheme onedark
 
 " ---------------------------------------------------------------------------
 " UI
