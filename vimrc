@@ -57,6 +57,8 @@ Bundle '907th/vim-auto-save'
 source $VIMRUNTIME/macros/matchit.vim
 " lightline
 Bundle 'itchyny/lightline.vim'
+" Yamlファイルのsyntax
+Bundle 'stephpy/vim-yaml'
 
 " ---------------------------------------------------------------------------
 " Colorscheme
