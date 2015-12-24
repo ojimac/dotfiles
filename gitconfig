@@ -6,6 +6,7 @@
 [core]
 	pager = less -r
 	attributesfile = ~/.gitattributes_global
+	excludesfile = /Users/ojimac/.gitignore_global
 [alias]
 	ad = add
 	addp = add -p
