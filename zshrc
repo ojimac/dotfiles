@@ -13,16 +13,12 @@ alias vi='vim'
 # git alias
 alias g='git'
 alias gits='git status'
-alias gs='git status'
 alias gitb='git branch'
-alias gb='git branch'
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias glp="git log -p --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias gpush="git push origin master"
 alias gpull="git pull origin master"
 alias gco="git checkout master"
-alias gstash='git stash'
-alias gpop='git stash pop'
 
 # charset
 export LANG=ja_JP.UTF-8
